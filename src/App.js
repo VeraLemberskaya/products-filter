@@ -2,7 +2,7 @@ import "./App.css";
 import FilterableProductTable from "../src/FilterProducts/FilterableProductTable";
 
 function App() {
-  const products = [
+  const PRODUCTS = [
     {
       category: "Sporting Goods",
       price: "$49.99",
@@ -41,11 +41,7 @@ function App() {
     },
   ];
 
-  return (
-    <div>
-      <FilterableProductTable products={products} />
-    </div>
-  );
+  return <FilterableProductTable products={PRODUCTS} />;
 }
 
 export default App;

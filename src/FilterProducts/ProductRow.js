@@ -1,15 +1,20 @@
 import React from "react";
 
 class ProductRow extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
+    const product = this.props.product;
+    const name = product.stocked ? (
+      product.name
+    ) : (
+      <span style={{ color: "red" }}>{product.name}</span>
+    );
     return (
-      <li>
-        <p>{this.props.productName}</p>
-        <p>{(this.props, productCost)}</p>
-      </li>
+      <tr>
+        <td>{name}</td>
+        <td>{product.price}</td>
+      </tr>
     );
   }
 }
+
+export default ProductRow;
